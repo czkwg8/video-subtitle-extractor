@@ -19,10 +19,10 @@ from numpy import average, dot, linalg
 from tqdm import tqdm
 import sys
 
-sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import importlib
-import config
-from tools import reformat
+from backend import config
+from backend.tools import reformat
 
 from backend.tools.ocr import OcrRecogniser, get_coordinates
 from backend.tools import subtitle_ocr
